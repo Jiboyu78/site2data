@@ -1,0 +1,21 @@
+{
+  "name": "books_demo",
+  "mode": "list_detail",
+  "list": {
+    "url": "https://books.toscrape.com/",
+    "item_selector": "article.product_pod",
+    "link_selector": "h3 a",
+    "link_attr": "href"
+  },
+  "detail": {
+    "fields": {
+      "title": { "selector": "div.product_main h1", "kind": "text", "transform": "strip" },
+      "price": { "selector": "p.price_color", "kind": "text", "transform": "regex:([0-9.]+)" },
+      "availability": { "selector": "p.availability", "kind": "text", "transform": "strip" },
+      "description": { "selector": "#product_description ~ p", "kind": "text", "transform": "strip", "optional": true },
+      "upc": { "selector": "table.table-striped tr:nth-child(1) td", "kind": "text", "optional": true }
+    }
+  },
+  "limits": { "max_items": 10, "delay_seconds": 0.5 },
+  "output": { "name": "books_demo", "formats": ["jsonl", "csv"] }
+}

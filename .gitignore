@@ -1,0 +1,45 @@
+# ===== 密钥与凭证（严禁入库）=====
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json
+*apikey*
+*api_key*
+*secret_key*
+*access_token*
+*_token.json
+cookies.json
+*_cookies.json
+
+# ===== 运行时产物 / 工作区 =====
+site2data_out/
+out/
+outputs/
+workspace/
+*.log
+progress.json
+run_summary.json
+*.jsonl
+
+# ===== 本地配置覆盖（可能含 Cookie/代理等敏感信息）=====
+site2data.config.local.json
+local_settings.json
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# ===== 构建产物 =====
+*.zip
+
+# ===== 系统 =====
+.DS_Store
+Thumbs.db

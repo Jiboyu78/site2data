@@ -1,0 +1,16 @@
+{
+  "user_agent": "site2data/1.0 (+polite research crawler; respects robots.txt)",
+  "timeout": 15.0,
+  "max_retries": 3,
+  "backoff_factor": 1.5,
+  "min_delay_seconds": 1.0,
+  "max_pages": 40,
+  "max_depth": 3,
+  "respect_robots": true,
+  "parser": "html.parser",
+  "probe_rate": false,
+  "harvest_max_items": 100,
+  "harvest_delay_seconds": 1.0,
+  "output_dir": "site2data_out",
+  "formats": ["jsonl", "csv"]
+}
