@@ -46,7 +46,7 @@ python scripts/site2data.py config        # 确认配置生效
    - `report.html` — 自包含可视化报告（内联 SVG 架构图，浅色主题，可直接打开）；
    - `scan_result.json` — 机器可读全量数据。
 3. 呈现给用户：
-   - 用 `present_files` 提交 `report.html` 与 `report.md`；
+   - 把 `report.html` 与 `report.md` 交付给用户查看（打开预览或输出文件路径）；
    - 在回复中概述：页面规模、页面类型分布（列表/详情/JS 壳…）、反爬发现（严重度排序）、建议抓取模式（`list_detail` / `url_list`）与频率。
 4. 解读反爬发现时对照 `references/anticrawl-playbook.md` 的「信号 → 判定 → 应对」表。
    限速试探仅在用户同意或明确要求时用 `--probe-rate` 开启（默认只做被动分析）。
@@ -88,7 +88,7 @@ python scripts/site2data.py config        # 确认配置生效
 
 ```
 □ 依赖可用（pip install -r scripts/requirements.txt）；config 确认限速与 robots 设置
-□ 阶段一：recon 出报告 → present_files(report.html, report.md) → 概述结构/数据节点/反爬/建议
+□ 阶段一：recon 出报告 → 交付 report.html / report.md → 概述结构/数据节点/反爬/建议
 □ 阶段二：与用户对齐字段清单 → 写 spec（小批量）→ harvest 或 codegen → validate → 读 run_summary 如实汇报
 □ 抓取遵守 robots 与红线；--probe-rate 仅显式同意时用
 □ 失败项单列清单；填充率不足先修选择器再放量

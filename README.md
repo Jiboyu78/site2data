@@ -12,7 +12,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-green.svg)](https://www.python.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Jiboyu78/site2data/pulls)
-[![WorkBuddy Skill](https://img.shields.io/badge/WorkBuddy-skill-8A2BE2.svg)](https://www.workbuddy.cn/)
+![Agent Skill](https://img.shields.io/badge/Agent%20Skill-8A2BE2.svg)
 
 English below · 以下为完整中文文档
 
@@ -63,7 +63,7 @@ flowchart LR
 ## 🚀 60 秒上手
 
 ```bash
-# 1. 克隆（WorkBuddy 用户也可直接作为 skill 安装，见下）
+# 1. 克隆（AI Agent 用户也可直接作为 skill 安装，见下）
 git clone https://github.com/Jiboyu78/site2data.git
 cd site2data
 
@@ -89,9 +89,10 @@ python books_crawler.py --limit 20 --out out     # 生成物只依赖 requests+b
 
 ## 📦 两种使用方式
 
-**① 作为 WorkBuddy Skill（推荐给 Agent 用户）**
+**① 作为 AI Agent Skill（推荐给 Agent 用户）**
 
-把本仓库放进 `~/.workbuddy/skills/site2data/`，即可被 Agent 自动触发：
+把本仓库放入你的 Agent 的 skills 目录（目录名保持 `site2data/`，入口为 `SKILL.md`），
+任何遵循 SKILL.md 技能规范的 Agent 都能识别并自动触发：
 「帮我分析一下 xxx 网站的结构」「抓取 xxx 的商品数据」→ 自动走侦察 → 报告 → 定制抓取全流程。
 
 **② 作为独立 CLI / Python 库**
@@ -246,6 +247,6 @@ python scripts/site2data.py recon https://example.com
 python scripts/site2data.py harvest examples/example-spec.json
 ```
 
-Works as a [WorkBuddy](https://www.workbuddy.cn/) skill or a plain CLI. See the Chinese docs above for details — PRs welcome!
+Works as a generic agent skill (SKILL.md standard) or a plain CLI. See the Chinese docs above for details — PRs welcome!
 
 </details>
